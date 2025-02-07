@@ -8,8 +8,7 @@ inputs.forEach((input) => {
   label.classList.add('field-label');
   label.setAttribute('for', input.id);
 
-  label.textContent =
-    input.name.charAt(0).toUpperCase() + input.name.slice(1).toUpperCase();
-  input.placeholder = label.textContent;
+  label.textContent = input.name.toUpperCase();
+  input.placeholder = input.name.charAt(0).toUpperCase() + input.name.slice(1);
   input.parentElement.insertBefore(label, input);
 });
